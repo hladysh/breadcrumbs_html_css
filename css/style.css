@@ -281,3 +281,100 @@ ul{
 #breadcrumbs-four .current::before{
   content: normal;
 }
+
+
+
+/*breadcrumbs-five*/
+
+
+#breadcrumbs {
+    text-align: center;
+}
+#breadcrumbs ul {
+    display: inline-table;
+    list-style: none outside none;
+}
+#breadcrumbs ul li {
+    display: inline;
+}
+#breadcrumbs ul li a {
+	display: block;
+	float: left;
+	height: 50px;
+	background: #3498db;
+	text-align: center;
+	padding: 30px 40px 0 40px;
+	position: relative;
+	margin: 0 10px 0 0; 
+	font-size: 20px;
+	text-decoration: none;
+	color: #fff;
+}
+
+#breadcrumbs ul li a:after {
+	content: "";  
+	border-top: 40px solid red;
+	border-bottom: 40px solid red;
+	border-left: 40px solid blue;
+	position: absolute; right: -40px; top: 0;
+}
+
+
+#breadcrumbs ul li a:after {
+    content: "";  
+    border-top: 40px solid transparent;
+    border-bottom: 40px solid transparent;
+    border-left: 40px solid #3498db;
+    position: absolute; right: -40px; top: 0;
+    z-index: 1;
+}
+
+
+#breadcrumbs ul li a:before {
+    content: "";
+    border-bottom: 40px solid transparent;
+    border-left: 40px solid #fff;
+    border-top: 40px solid transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#breadcrumbs ul li a {
+	display: block;
+	float: left;
+	height: 50px;
+	/*background: #3498db;*/
+	text-align: center;
+	padding: 30px 40px 0 80px;
+	position: relative;
+	margin: 0 10px 0 0; 
+	font-size: 20px;
+	text-decoration: none;
+	color: #fff;
+}
+
+
+#breadcrumbs ul li:first-child a {
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+#breadcrumbs ul li:first-child a:before {
+    display: none;
+}
+#breadcrumbs ul li:last-child a {
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    padding-right: 80px;
+}
+#breadcrumbs ul li:last-child a:after {
+    display: none;
+}
+
+
+#breadcrumbs ul li a:hover {
+    background: none repeat scroll 0 0 #fa5ba5;
+}
+#breadcrumbs ul li a:hover:after {
+    border-left-color: #fa5ba5;
+}
